@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="borda-rgb.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="label"></div>
+    </div>
+  </div>
+  <script>
+    const audio = new Audio('Elektronomia - Sky High.m4a');
+    audio.play()
+    let play = true
+    document.addEventListener('click', function(){
+      play = !play
+      if(!play){
+        audio.pause()
+      }
+      else{
+        audio.play()
+      }
+    })
+  </script>
+</body>
+</html>
