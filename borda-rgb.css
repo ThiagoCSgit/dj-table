@@ -6,17 +6,61 @@
 
 body{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
+  width: 100%;
   background-color: #151320;
   overflow: hidden;
+  flex-direction: column;
 }
+
+.player{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.btn{
+  background-color: transparent;
+  border: 0;
+  transform: scale(3);
+}
+
+.icons{
+  display: inline-block;
+  color: #fff;
+}
+
+.icons:hover{
+  color: #0099ff;
+}
+.rotate{
+  transform: rotate(180deg) scale(3);
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.hidden-pause{
+  display: none;
+}
+.show-pause{
+  display: block;
+}
+.show-play{
+  display: block;
+}
+.hidden-play{
+  display: none;
+}
+
 
 .box{
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   display: flex;
   background: #151320;
   justify-content: center;
@@ -28,8 +72,8 @@ body{
 .box::before, .box::after{
   content: '';
   position: absolute;
-  width: calc(60% + 20px);
-  height: calc(60% + 20px);
+  width: calc(70% + 20px);
+  height: calc(70% + 20px);
   background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,
   #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
   background-size: 300%;
@@ -43,8 +87,8 @@ body{
 
 .label{
   position: relative;
-  width: calc(50% + 7px);
-  height: calc(50% + 7px);
+  width: calc(60% + 7px);
+  height: calc(60% + 7px);
   border-radius: 50%;
   display: flex;
   background: #bad5ee;
@@ -103,6 +147,6 @@ body{
     transform: scale(1.55);
   }
   100%{
-    transform: scale(1.75);
+    transform: scale(1.70);
   }
 }
