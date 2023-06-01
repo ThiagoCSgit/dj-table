@@ -81,7 +81,8 @@ body{
   animation: borda-rgb 4s infinite linear;
 }
 
-.container{
+
+.animation-scales{
   animation: scales 2s infinite alternate;
 }
 
@@ -92,11 +93,11 @@ body{
   border-radius: 50%;
   display: flex;
   background: #bad5ee;
-  animation: borda-rgb 4s infinite linear;
   justify-content: center;
   align-items: center;
   z-index: 1;
 }
+
 
 .label::before, .label::after{
   content: '';

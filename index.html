@@ -31,8 +31,11 @@
   <script>
     const audio = new Audio('Elektronomia - Sky High.m4a');
     function pausePlay(value){
+      let container = document.querySelector('.container')
       if(value){
         audio.play()
+        container.classList.add('animation-scales')
+
         let play = document.querySelector('.show-play')
         play.classList.remove('show-play')
         play.classList.add('hidden-play')
@@ -43,6 +46,8 @@
       }
       else{
         audio.pause()
+        container.classList.remove('animation-scales')
+
         let play = document.querySelector('.hidden-play')
         play.classList.add('show-play')
         play.classList.remove('hidden-play')
